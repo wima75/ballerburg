@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>f1e223ad-d26c-42a3-b485-2a1d956874ae</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>477a582f-ff95-45c6-85db-f00edd2b1032</UniqueIdentifier>
+    </Filter>
+    <Page Include="Common\StandardStyles.xaml">
+      <Filter>Common</Filter>
+    </Page>
+    <Image Include="Assets\Logo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SmallLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Filter Include="Assets\resx">
+      <UniqueIdentifier>{46ab3ac0-76ee-4ef8-8a96-874762483d60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Audio">
+      <UniqueIdentifier>{a73d1782-0333-4e1c-b8a8-1d86206a7384}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DirectXBase.cpp" />
+    <ClCompile Include="App.xaml.cpp" />
+    <ClCompile Include="DirectXPage.xaml.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Atari.cpp" />
+    <ClCompile Include="Baller1.cpp" />
+    <ClCompile Include="Baller2.cpp" />
+    <ClCompile Include="Sound.cpp" />
+    <ClCompile Include="WriteableBitmapEx.cpp" />
+    <ClCompile Include="AudioLooper.cpp" />
+    <ClCompile Include="BiquadFilterChannel.cpp" />
+    <ClCompile Include="MasterChannel.cpp" />
+    <ClCompile Include="PsgDeviceChannel.cpp" />
+    <ClCompile Include="MediaStreamer.cpp" />
+    <ClCompile Include="Audio.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="App.xaml.h" />
+    <ClInclude Include="DirectXPage.xaml.h" />
+    <ClInclude Include="DirectXHelper.h" />
+    <ClInclude Include="DirectXBase.h" />
+    <ClInclude Include="Atari.h" />
+    <ClInclude Include="Baller1.h" />
+    <ClInclude Include="Baller2.h" />
+    <ClInclude Include="Sound.h" />
+    <ClInclude Include="WriteableBitmapEx.h" />
+    <ClInclude Include="AudioLooper.h" />
+    <ClInclude Include="BiquadFilterChannel.h" />
+    <ClInclude Include="MasterChannel.h" />
+    <ClInclude Include="PsgDeviceChannel.h" />
+    <ClInclude Include="Baller.h" />
+    <ClInclude Include="MediaStreamer.h" />
+    <ClInclude Include="Audio.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Ballerburg_TemporaryKey.pfx" />
+    <None Include="BALLER.DAT" />
+    <None Include="Assets\Audio\background.wma">
+      <Filter>Assets\Audio</Filter>
+    </None>
+    <None Include="Package.StoreAssociation.xml" />
+    <None Include="Ballerburg_StoreKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="DirectXPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\resx\DRAN.png">
+      <Filter>Assets\resx</Filter>
+    </Image>
+    <Image Include="Assets\resx\font.png">
+      <Filter>Assets\resx</Filter>
+    </Image>
+    <Image Include="Assets\resx\font_disabled.png">
+      <Filter>Assets\resx</Filter>
+    </Image>
+    <Image Include="Assets\resx\form_alert_3.png">
+      <Filter>Assets\resx</Filter>
+    </Image>
+    <Image Include="Assets\resx\form_alert_4.png">
+      <Filter>Assets\resx</Filter>
+    </Image>
+    <Image Include="Assets\resx\form_alert_5.png">
+      <Filter>Assets\resx</Filter>
+    </Image>
+    <Image Include="Assets\resx\form_alert_schade.png">
+      <Filter>Assets\resx</Filter>
+    </Image>
+    <Image Include="Assets\resx\Menu.png">
+      <Filter>Assets\resx</Filter>
+    </Image>
+    <Image Include="Assets\resx\Menu_Desk.png">
+      <Filter>Assets\resx</Filter>
+    </Image>
+    <Image Include="Assets\resx\Menu_Ergebnisse.png">
+      <Filter>Assets\resx</Filter>
+    </Image>
+    <Image Include="Assets\resx\Menu_Modus.png">
+      <Filter>Assets\resx</Filter>
+    </Image>
+    <Image Include="Assets\resx\Menu_Regeln.png">
+      <Filter>Assets\resx</Filter>
+    </Image>
+    <Image Include="Assets\resx\Menu_Spiel.png">
+      <Filter>Assets\resx</Filter>
+    </Image>
+    <Image Include="Assets\resx\NAMEN.png">
+      <Filter>Assets\resx</Filter>
+    </Image>
+    <Image Include="Assets\resx\SCHUSS.png">
+      <Filter>Assets\resx</Filter>
+    </Image>
+    <Image Include="Assets\resx\SIEGER.png">
+      <Filter>Assets\resx</Filter>
+    </Image>
+    <Image Include="Assets\resx\STATUS.png">
+      <Filter>Assets\resx</Filter>
+    </Image>
+    <Image Include="Assets\resx\COMPUTER.png">
+      <Filter>Assets\resx</Filter>
+    </Image>
+    <Image Include="Assets\resx\BURG.png">
+      <Filter>Assets\resx</Filter>
+    </Image>
+    <Image Include="Assets\resx\INFOTREE.png">
+      <Filter>Assets\resx</Filter>
+    </Image>
+    <Image Include="Assets\resx\REGEL1.png">
+      <Filter>Assets\resx</Filter>
+    </Image>
+    <Image Include="Assets\resx\REGEL2.png">
+      <Filter>Assets\resx</Filter>
+    </Image>
+    <Image Include="Assets\resx\REGEL3.png">
+      <Filter>Assets\resx</Filter>
+    </Image>
+    <Image Include="Assets\resx\OPTION.png">
+      <Filter>Assets\resx</Filter>
+    </Image>
+    <Image Include="Assets\resx\EINTRAG.png">
+      <Filter>Assets\resx</Filter>
+    </Image>
+    <Image Include="Assets\resx\GEWONNEN.png">
+      <Filter>Assets\resx</Filter>
+    </Image>
+    <Image Include="Assets\resx\VERLOREN.png">
+      <Filter>Assets\resx</Filter>
+    </Image>
+    <Image Include="Assets\resx\NAMENweiss.png">
+      <Filter>Assets\resx</Filter>
+    </Image>
+    <Image Include="Assets\resx\EINTRAGweiss.png">
+      <Filter>Assets\resx</Filter>
+    </Image>
+    <Image Include="Assets\resx\form_alert_0.png">
+      <Filter>Assets\resx</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\Audio\baller0.wav">
+      <Filter>Assets\Audio</Filter>
+    </Media>
+    <Media Include="Assets\Audio\baller1.wav">
+      <Filter>Assets\Audio</Filter>
+    </Media>
+    <Media Include="Assets\Audio\baller2.wav">
+      <Filter>Assets\Audio</Filter>
+    </Media>
+    <Media Include="Assets\Audio\baller3.wav">
+      <Filter>Assets\Audio</Filter>
+    </Media>
+    <Media Include="Assets\Audio\baller4.wav">
+      <Filter>Assets\Audio</Filter>
+    </Media>
+    <Media Include="Assets\Audio\baller5.wav">
+      <Filter>Assets\Audio</Filter>
+    </Media>
+    <Media Include="Assets\Audio\baller6.wav">
+      <Filter>Assets\Audio</Filter>
+    </Media>
+    <Media Include="Assets\Audio\baller7.wav">
+      <Filter>Assets\Audio</Filter>
+    </Media>
+    <Media Include="Assets\Audio\baller8.wav">
+      <Filter>Assets\Audio</Filter>
+    </Media>
+    <Media Include="Assets\Audio\baller9.wav">
+      <Filter>Assets\Audio</Filter>
+    </Media>
+    <Media Include="Assets\Audio\baller10.wav">
+      <Filter>Assets\Audio</Filter>
+    </Media>
+    <Media Include="Assets\Audio\baller11.wav">
+      <Filter>Assets\Audio</Filter>
+    </Media>
+    <Media Include="Assets\Audio\baller12.wav">
+      <Filter>Assets\Audio</Filter>
+    </Media>
+    <Media Include="Assets\Audio\baller13.wav">
+      <Filter>Assets\Audio</Filter>
+    </Media>
+    <Media Include="Assets\Audio\baller14.wav">
+      <Filter>Assets\Audio</Filter>
+    </Media>
+    <Media Include="Assets\Audio\baller15.wav">
+      <Filter>Assets\Audio</Filter>
+    </Media>
+    <Media Include="Assets\Audio\baller16.wav">
+      <Filter>Assets\Audio</Filter>
+    </Media>
+    <Media Include="Assets\Audio\baller17.wav">
+      <Filter>Assets\Audio</Filter>
+    </Media>
+    <Media Include="Assets\Audio\baller18.wav">
+      <Filter>Assets\Audio</Filter>
+    </Media>
+    <Media Include="Assets\Audio\baller19.wav">
+      <Filter>Assets\Audio</Filter>
+    </Media>
+    <Media Include="Assets\Audio\baller20.wav">
+      <Filter>Assets\Audio</Filter>
+    </Media>
+    <Media Include="Assets\Audio\baller21.wav">
+      <Filter>Assets\Audio</Filter>
+    </Media>
+    <Media Include="Assets\Audio\baller22.wav">
+      <Filter>Assets\Audio</Filter>
+    </Media>
+    <Media Include="Assets\Audio\baller23.wav">
+      <Filter>Assets\Audio</Filter>
+    </Media>
+    <Media Include="Assets\Audio\baller24.wav">
+      <Filter>Assets\Audio</Filter>
+    </Media>
+    <Media Include="Assets\Audio\baller25.wav">
+      <Filter>Assets\Audio</Filter>
+    </Media>
+    <Media Include="Assets\Audio\baller26.wav">
+      <Filter>Assets\Audio</Filter>
+    </Media>
+    <Media Include="Assets\Audio\baller27.wav">
+      <Filter>Assets\Audio</Filter>
+    </Media>
+    <Media Include="Assets\Audio\baller28.wav">
+      <Filter>Assets\Audio</Filter>
+    </Media>
+    <Media Include="Assets\Audio\baller29.wav">
+      <Filter>Assets\Audio</Filter>
+    </Media>
+    <Media Include="Assets\Audio\baller30.wav">
+      <Filter>Assets\Audio</Filter>
+    </Media>
+    <Media Include="Assets\Audio\baller31.wav">
+      <Filter>Assets\Audio</Filter>
+    </Media>
+    <Media Include="Assets\Audio\bing.wav">
+      <Filter>Assets\Audio</Filter>
+    </Media>
+    <Media Include="Assets\Audio\ende.wav">
+      <Filter>Assets\Audio</Filter>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Assets\resx\atari.ttf">
+      <Filter>Assets\resx</Filter>
+    </Font>
+  </ItemGroup>
+</Project>

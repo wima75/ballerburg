@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{f1e223ad-d26c-42a3-b485-2a1d956874ae}</ProjectGuid>
+    <RootNamespace>Ballerburg</RootNamespace>
+    <DefaultLanguage>de-CH</DefaultLanguage>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <AppContainerApplication>true</AppContainerApplication>
+    <SccProjectName>SAK</SccProjectName>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccProvider>SAK</SccProvider>
+    <ApplicationType>Windows Store</ApplicationType>
+    <ApplicationTypeRevision>8.1</ApplicationTypeRevision>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.17134.0</WindowsTargetPlatformMinVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <PackageCertificateKeyFile>Ballerburg_StoreKey.pfx</PackageCertificateKeyFile>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
+    <PackageCertificateThumbprint>F738C36221044AA4F9089F13D5DCF75B5B4376B0</PackageCertificateThumbprint>
+    <AppxBundlePlatforms>x86|arm</AppxBundlePlatforms>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <Link>
+      <AdditionalDependencies>d2d1.lib;d3d11.lib;dxgi.lib;ole32.lib;windowscodecs.lib;dwrite.lib;xaudio2.lib;xinput.lib;mfcore.lib;mfplat.lib;mfreadwrite.lib;mfuuid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateWindowsMetadata>true</GenerateWindowsMetadata>
+    </Link>
+    <ClCompile>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)pch.pch</PrecompiledHeaderOutputFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(IntermediateOutputPath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4453</DisableSpecificWarnings>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)'=='Release'">
+    <ClCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">
+    <ClCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Atari.h" />
+    <ClInclude Include="Audio.h" />
+    <ClInclude Include="AudioLooper.h" />
+    <ClInclude Include="Baller.h" />
+    <ClInclude Include="Baller1.h" />
+    <ClInclude Include="Baller2.h" />
+    <ClInclude Include="BiquadFilterChannel.h" />
+    <ClInclude Include="MasterChannel.h" />
+    <ClInclude Include="MediaStreamer.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="App.xaml.h">
+      <DependentUpon>App.xaml</DependentUpon>
+    </ClInclude>
+    <ClInclude Include="DirectXPage.xaml.h">
+      <DependentUpon>DirectXPage.xaml</DependentUpon>
+    </ClInclude>
+    <ClInclude Include="PsgDeviceChannel.h" />
+    <ClInclude Include="Sound.h" />
+    <ClInclude Include="WriteableBitmapEx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Common\StandardStyles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DirectXPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="Assets\Audio\background.wma">
+      <FileType>Document</FileType>
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="BALLER.DAT">
+      <FileType>Document</FileType>
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="Ballerburg_StoreKey.pfx" />
+    <None Include="Ballerburg_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\Logo.png" />
+    <Image Include="Assets\resx\EINTRAG.png" />
+    <Image Include="Assets\resx\EINTRAGweiss.png" />
+    <Image Include="Assets\resx\form_alert_0.png">
+      <FileType>Document</FileType>
+    </Image>
+    <Image Include="Assets\resx\GEWONNEN.png" />
+    <Image Include="Assets\resx\INFOTREE.png" />
+    <Image Include="Assets\resx\Menu.png" />
+    <Image Include="Assets\resx\Menu_Desk.png" />
+    <Image Include="Assets\resx\Menu_Ergebnisse.png" />
+    <Image Include="Assets\resx\Menu_Modus.png" />
+    <Image Include="Assets\resx\Menu_Regeln.png" />
+    <Image Include="Assets\resx\Menu_Spiel.png" />
+    <Image Include="Assets\resx\BURG.png">
+      <FileType>Document</FileType>
+    </Image>
+    <Image Include="Assets\resx\COMPUTER.png">
+      <FileType>Document</FileType>
+    </Image>
+    <Image Include="Assets\resx\DRAN.png">
+      <FileType>Document</FileType>
+    </Image>
+    <Image Include="Assets\resx\font.png">
+      <FileType>Document</FileType>
+    </Image>
+    <Image Include="Assets\resx\font_disabled.png">
+      <FileType>Document</FileType>
+    </Image>
+    <Image Include="Assets\resx\NAMENweiss.png" />
+    <Image Include="Assets\resx\OPTION.png" />
+    <Image Include="Assets\resx\REGEL1.png">
+      <FileType>Document</FileType>
+    </Image>
+    <Image Include="Assets\resx\REGEL2.png">
+      <FileType>Document</FileType>
+    </Image>
+    <Image Include="Assets\resx\REGEL3.png">
+      <FileType>Document</FileType>
+    </Image>
+    <Image Include="Assets\resx\form_alert_3.png">
+      <FileType>Document</FileType>
+    </Image>
+    <Image Include="Assets\resx\form_alert_4.png">
+      <FileType>Document</FileType>
+    </Image>
+    <Image Include="Assets\resx\form_alert_5.png">
+      <FileType>Document</FileType>
+    </Image>
+    <Image Include="Assets\resx\form_alert_schade.png">
+      <FileType>Document</FileType>
+    </Image>
+    <Image Include="Assets\resx\NAMEN.png">
+      <FileType>Document</FileType>
+    </Image>
+    <Image Include="Assets\resx\SCHUSS.png">
+      <FileType>Document</FileType>
+    </Image>
+    <Image Include="Assets\resx\SIEGER.png">
+      <FileType>Document</FileType>
+    </Image>
+    <Image Include="Assets\resx\STATUS.png">
+      <FileType>Document</FileType>
+    </Image>
+    <Image Include="Assets\resx\VERLOREN.png" />
+    <Image Include="Assets\SmallLogo.png" />
+    <Image Include="Assets\StoreLogo.png" />
+    <Image Include="Assets\SplashScreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DirectXHelper.h" />
+    <ClInclude Include="DirectXBase.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Atari.cpp" />
+    <ClCompile Include="Audio.cpp" />
+    <ClCompile Include="AudioLooper.cpp" />
+    <ClCompile Include="Baller1.cpp" />
+    <ClCompile Include="Baller2.cpp" />
+    <ClCompile Include="BiquadFilterChannel.cpp" />
+    <ClCompile Include="MasterChannel.cpp" />
+    <ClCompile Include="MediaStreamer.cpp" />
+    <ClCompile Include="PsgDeviceChannel.cpp" />
+    <ClCompile Include="DirectXBase.cpp" />
+    <ClCompile Include="App.xaml.cpp">
+      <DependentUpon>App.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="DirectXPage.xaml.cpp">
+      <DependentUpon>DirectXPage.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Sound.cpp" />
+    <ClCompile Include="WriteableBitmapEx.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\Audio\baller0.wav" />
+    <Media Include="Assets\Audio\baller1.wav" />
+    <Media Include="Assets\Audio\baller10.wav" />
+    <Media Include="Assets\Audio\baller11.wav" />
+    <Media Include="Assets\Audio\baller12.wav" />
+    <Media Include="Assets\Audio\baller13.wav" />
+    <Media Include="Assets\Audio\baller14.wav" />
+    <Media Include="Assets\Audio\baller15.wav" />
+    <Media Include="Assets\Audio\baller16.wav" />
+    <Media Include="Assets\Audio\baller17.wav" />
+    <Media Include="Assets\Audio\baller18.wav" />
+    <Media Include="Assets\Audio\baller19.wav" />
+    <Media Include="Assets\Audio\baller2.wav" />
+    <Media Include="Assets\Audio\baller20.wav" />
+    <Media Include="Assets\Audio\baller21.wav" />
+    <Media Include="Assets\Audio\baller22.wav" />
+    <Media Include="Assets\Audio\baller23.wav" />
+    <Media Include="Assets\Audio\baller24.wav" />
+    <Media Include="Assets\Audio\baller25.wav" />
+    <Media Include="Assets\Audio\baller26.wav" />
+    <Media Include="Assets\Audio\baller27.wav" />
+    <Media Include="Assets\Audio\baller28.wav" />
+    <Media Include="Assets\Audio\baller29.wav" />
+    <Media Include="Assets\Audio\baller3.wav" />
+    <Media Include="Assets\Audio\baller30.wav" />
+    <Media Include="Assets\Audio\baller31.wav" />
+    <Media Include="Assets\Audio\baller4.wav" />
+    <Media Include="Assets\Audio\baller5.wav" />
+    <Media Include="Assets\Audio\baller6.wav" />
+    <Media Include="Assets\Audio\baller7.wav" />
+    <Media Include="Assets\Audio\baller8.wav" />
+    <Media Include="Assets\Audio\baller9.wav" />
+    <Media Include="Assets\Audio\bing.wav" />
+    <Media Include="Assets\Audio\ende.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Assets\resx\atari.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Package.StoreAssociation.xml" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
