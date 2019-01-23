@@ -33,6 +33,7 @@ extern byte* _form_dial_screen;
 extern ressource_form* res_form;
 extern bool menu_enabled;
 
+// diese hÃ¤sslichen Variablen-Namen stammen aus dem Original-Source-Code.
 double vvx,vvy;
 WriteableBitmapEx* handle;
 short mx,my,bt,dum,m_buf[8], xy[100], 
@@ -47,11 +48,11 @@ int   buf, scr, l_nam,r_nam,  a_opt, a_ein,
       a_men,a_inf,a_sch,a_brg,a_nam,a_dra,a_sta,a_sie,a_com,a_re1,a_re2,a_re3;
 short * bur_ad;
 char  f, mod, wnd, end, txt[4], an_erl, mxin, au_kap,
-      cw[2]={2,2}, cx[2]={1,1}, cn[7][8]={ "Tölpel","Dummel","Brubbel",
-      "Wusel","Brösel","Toffel","Rüpel" },
-      t_na[6][8]={ "Tölpel","Dummel","Brubbel","Wusel","Brösel","Toffel" },
+      cw[2]={2,2}, cx[2]={1,1}, cn[7][8]={ "Tï¿½lpel","Dummel","Brubbel",
+      "Wusel","Brï¿½sel","Toffel","Rï¿½ï¿½pel" },
+      t_na[6][8]={ "Tï¿½lpel","Dummel","Brubbel","Wusel","Brï¿½sel","Toffel" },
       nsp1[22]="Hugo",nsp2[22]="Emil";
-	  //nsp1[22]="Tölpel",nsp2[22]="Wusel";
+	  //nsp1[22]="Tï¿½lpel",nsp2[22]="Wusel";
 struct { short x,y,w,p; } ka[2][10];
 struct { short x,y; } ft[2][5];
 
@@ -102,7 +103,7 @@ void main1()
 	/*for(int i = 0;i<20;i++) {
 		burgen[i] = new short[1000];
 	}*/
-	//bur_ad = (short *)malloc(42000);  /* Speicher für Burgdaten und zweiten Schirm holen */
+	//bur_ad = (short *)malloc(42000);  /* Speicher fï¿½r Burgdaten und zweiten Schirm holen */
 	//bur_ad=buf+32000;
 		an_erl=1;
 		max_rund=32767;
@@ -201,7 +202,7 @@ void event1()
 		//ein_zug1();
 	}
 	else if( m_buf[4]==MOD5 )
-	{                       /* Computer auswählen */
+	{                       /* Computer auswï¿½hlen */
 		obj_do_callback = &computer_gewaehlt;
 		obj_do( a_com );
 		return;
@@ -439,7 +440,7 @@ void neues()
 
 //s_ein_zug1 _ein_zug1;
 
-/************************* Durchführen eines Zuges ***************************/
+/************************* Durchfï¿½hren eines Zuges ***************************/
 void ein_zug()
 {
 short i,fl,a;
@@ -570,7 +571,7 @@ void ein_zug4()
 	handle->RestoreRectangle(res_form->x, res_form->y, res_form->x+res_form->w, res_form->y+res_form->h, _form_dial_screen);
 }
 
-/********** Berechnen von Bevölkerungszuwachs usw. nach jedem Zug ************/
+/********** Berechnen von Bevï¿½lkerungszuwachs usw. nach jedem Zug ************/
 void rechnen()
 {
    short j;
@@ -609,9 +610,9 @@ void ende()
 	{ a=s2[strlen(s2)-1]; strcat_s( s2, a=='s' || a=='S'? "' ":"s " ); }
 	switch( end&240 )
 	{
-	case 16: strcat_s( s2,"König wurde getroffen," );
+	case 16: strcat_s( s2,"Kï¿½nig wurde getroffen," );
 		strcpy_s( s3,"  daraufhin ergab sich dessen Volk. )" ); break;
-	case 32: strcat_s( s2,"König hat aufgrund der" );
+	case 32: strcat_s( s2,"Kï¿½nig hat aufgrund der" );
 		strcpy_s( s3,"  aussichtslosen Lage kapituliert. )" ); break;
 	case 48: strcat_s( s2," hat kein Volk mehr. )" ); s3[0]=0; break;
 	case 64: strcpy_s( s3,s2 );
@@ -637,8 +638,8 @@ void ende()
 
 /* Die Routine m_wait() wird von m_musik() nach jedem 1/96 Takt aufgerufen.  */
 /* In diesem Fall macht sie nichts anderes als die eigentliche Warteschleife */
-/* aufzurufen. In eigenen Programmen k”nnten Sie hier w„hrend der Musik zu-  */
-/* s„tzliche Aktionen ablaufen lassen. */
+/* aufzurufen. In eigenen Programmen kï¿½nnten Sie hier wï¿½hrend der Musik zu-  */
+/* sï¿½tzliche Aktionen ablaufen lassen. */
 void m_wait()
 {
 	// TODO
@@ -858,7 +859,7 @@ char zeichen()  /* liest ein char von der Datei */
    return(a);
 }
 
-int rdzahl() /* liest eine Dezimalzahl von der Datei, Remarks werden berlesen */
+int rdzahl() /* liest eine Dezimalzahl von der Datei, Remarks werden ï¿½berlesen */
 {
    char a,sign=1,rem=0;    /* wird durch * getoggled, und zeigt damit an, */
                            /* ob man sich in einer Bemerkung befindet */
@@ -924,7 +925,7 @@ void sch_obj1()
 {
 	static short fig[]={ 0,0,15,20,30,20,20,15,10,0,10,-30,18,-18,20,-5,24,-6,
 		20,-25,10,-40,0,-45, -10,-40,-20,-25,-24,-6,-20,-5,-18,-18,-10,-30,-10,0,
-		-20,15,-30,20,-15,20, -1,-1 }; /* Daten fr das M„nnchen */
+		-20,15,-30,20,-15,20, -1,-1 }; /* Daten fï¿½r das Mï¿½nnchen */
 	short i, wi,pv, xw,yw,xp,yp,xk,yk;
 	double s,c;
 	char *aw,*ap, fl;
@@ -1166,7 +1167,7 @@ void obj_do2()
 }
 
 /*********************** Elementare  Grafikbefehle ***************************/
-void gem_init() /* Öffnen der Workstation... */
+void gem_init() /* ï¿½ffnen der Workstation... */
 {
 	// TODO
 }
@@ -1203,7 +1204,7 @@ void clr( short x, short y, short w, short h )
 	box(x,y,x+w-1,y+h-1,0);
 }
 
-void cls() /* Löscht den gesamten Bildschirm ausser der Menüleiste */
+void cls() /* Lï¿½scht den gesamten Bildschirm ausser der Menï¿½leiste */
 {
 	int *a,i;
 
@@ -1216,7 +1217,7 @@ void cls() /* Löscht den gesamten Bildschirm ausser der Menüleiste */
 		{
 			index = (y * 640 + x) << 2;
 			handle->pixels[index] = 255; // blau
-			handle->pixels[index+1] = 255; // grün
+			handle->pixels[index+1] = 255; // grï¿½n
 			handle->pixels[index+2] = 255; // rot
 			handle->pixels[index+3] = 0; // alpha
 

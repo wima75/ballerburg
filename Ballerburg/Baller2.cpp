@@ -45,7 +45,7 @@ extern byte* _form_dial_screen;
 extern ressource_form* res_form;
 extern bool menu_enabled;
 
-/***************** Grafikdaten für Trohn, Kanone... **************************/
+/***************** Grafikdaten fï¿½ï¿½r Trohn, Kanone... **************************/
 short trohn[]={ -2,2,2, 8,3,5,12,8,12,12,16,12,17,14,15,
    15,15,17,17,17,16,21,11,24,11,21,3,-9, -4, 3,0,5,2,24,2,26,0,-9,
    19,4,18,9,-9, 10,4,11,9,-9, 14,4,15,4,-9, 8,10,11,11,-9, 21,10,18,11,-9,
@@ -71,7 +71,7 @@ short *bh;
 //RenderObj _renderObj;
 //extern Sound^ _sound;
 
-int comp()  /* Führt einen Zug des Computers durch */
+int comp()  /* Fï¿½ï¿½hrt einen Zug des Computers durch */
 {
    char wd;
    int i,t;
@@ -84,12 +84,12 @@ int comp()  /* Führt einen Zug des Computers durch */
    if( i>9 && ge[n]>=p[2] ) { init_ka(i=0,639*n); ge[n]-=p[2]; } /* Ka. kauf.*/
    if( (ft[n][0].x<0 || ft[n][1].x<0 || ft[n][2].x<0 ) && ge[n]>=p[1] &&
        cw[n]>2 )
-      { ge[n]-=p[1]; fturm(); } /* F”rderturm kaufen */
+      { ge[n]-=p[1]; fturm(); } /* Fï¿½rderturm kaufen */
    drw_all();
 
    if( i>9 || pu[n]<20 || !ku[n] ) return(-1);
 
-        /* Jetzt kommen die Berechnungen für den Schuss: */
+        /* Jetzt kommen die Berechnungen fï¿½r den Schuss: */
    bh=burgen[bur[!n]];
    do i=Random()%10; while( ka[n][i].x==-1 );
 
@@ -123,7 +123,7 @@ int comp()  /* Führt einen Zug des Computers durch */
    }
 
    if( n ) vx=-vx;
-   vvx=vx; vvy=vy;  /* Werte fr Schuss bergeben */
+   vvx=vx; vvy=vy;  /* Werte fï¿½r Schuss ï¿½bergeben */
 
    if( vx<0 ) vx=-vx; 
    wi=atan2(vy,vx);
@@ -134,7 +134,7 @@ int comp()  /* Führt einen Zug des Computers durch */
 }
 
 /********************* Routinen zur Zielerkennung: ***************************/
-/* Die Routinen berechnen die Zielkoordinaten fr den K”nig, Kanonen, Geld...*/
+/* Die Routinen berechnen die Zielkoordinaten fï¿½r den Kï¿½nig, Kanonen, Geld...*/
 void z_kn()
 {
    zx=!n*639-f*(bh[21]+15);
@@ -199,6 +199,10 @@ void schuss( short k ) {
 	baller(0);
 
 	kugel( (int)x,(int)y ); v=1;
+
+    // Im Original-Source-Code ist die Flugschleife ein while, dazwischen wird immer gezeichnet.
+    // Dies funtkioniert hier nicht. Um den Code trotzdem mÃ¶glichst 1:1 Ã¼bernehmen zu kÃ¶nnen,
+    // habe ich dies mit diesen komischen Callbacks und Goto's gelÃ¶st. Recht hÃ¤sslich, aber funktioniert ;-)
 
 	_flugschleife.x = x;
 	_flugschleife.y = y;
@@ -370,7 +374,7 @@ void Treffer()
             {
                if( drin( a,v,30,37,-2,(int)ox,(int)oy ) )
                {
-				   // Förderturm getroffen
+				   // Fï¿½rderturm getroffen
 				   _treffer._nextGoto = Foerderturm;
                   expls((a=ft[n][j].x-29*n)+15,(v=ft[n][j].y-40)+20,15,20,120);
 				  _treffer.v=v;_treffer.c=c;_treffer.ox=ox;_treffer.oy=oy;_treffer.a=a;_treffer.x=x;_treffer.y=y;_treffer.j=j;_treffer.vx=vx;_treffer.vy=vy;
@@ -384,7 +388,7 @@ void Treffer()
             { clr( wx[n]-10,wy[n]-15,20,15 ); wx[n]=-1; }
          if( drin( bg[21],bg[22],30,25,0,(int)ox,(int)oy ) )
          {
-			 // König getroffen
+			 // Kï¿½nig getroffen
             end=n+17;
 			_treffer._nextGoto = Koenig;
             expls( a=639*n+f*(bg[21]+15),v=by[n]-bg[22]-12,17,17,40 );
@@ -598,7 +602,7 @@ void drw_gpk( char w )
 		for( x=0; i>0 && x<bg[31+w]; x+=xp,z++,i-- )
 			draw( xr+f*x,yr-y, a );
 	show();
-	if( i>0 )    /* Maximalbetrag überschritten ? */
+	if( i>0 )    /* Maximalbetrag ï¿½berschritten ? */
 		switch( w )
 	{
 		case 0: ge[m]=z*150; break;
@@ -705,13 +709,13 @@ void markt3()
    //} while( false /*a!=FERTIG */);
 
    lod_scr(); drw_all();
-   // TODO wenn hier der Dialog geschlossen wird, überschreibt es den gespeicherten Screen.
+   // TODO wenn hier der Dialog geschlossen wird, ï¿½berschreibt es den gespeicherten Screen.
    //form_dial( 2,mx,my,30,20,fx,fy,fw,fh );
    menu_enabled = true;
    callback = &ein_zug1;
 }
 
-void zahl( short nr, short wert ) /* 5-stellige Zahl, rechtsbndig, ohne führende Nullen */
+void zahl( short nr, short wert ) /* 5-stellige Zahl, rechtsbï¿½ndig, ohne fï¿½hrende Nullen */
 {
    short i,a,b;
    char *adr;
@@ -722,7 +726,7 @@ void zahl( short nr, short wert ) /* 5-stellige Zahl, rechtsbndig, ohne führend
 }
 
 /********************* Von Markt aufzurufende Routinen ***********************/
-void fturm()  /* Förderturm bauen */
+void fturm()  /* Fï¿½rderturm bauen */
 {
    short x,y,yy,i,t;
 
@@ -803,22 +807,22 @@ void anbau2()
 		}
 }
 
-/*************************** Audienz beim König ******************************/
-char kna[]="[0][Der König meint:             |'",
-     kne[]="'|][Demütig zur Kenntnis genommen]",
+/*************************** Audienz beim Kï¿½nig ******************************/
+char kna[]="[0][Der Kï¿½nig meint:             |'",
+     kne[]="'|][Demï¿½tig zur Kenntnis genommen]",
      kn0[]="Naja...| Nun gut...| Weiter so...",
      kn1[]="Ich bin zufrieden| mit Ihren Leistungen!",
      kn2[]="Hervorragend,| Weiter so!",
      kn3[]="Vielleicht sollten Sie mal| die Steuern senken...",
      kn4[]="Wenn Sie so weiter machen| werde ich Sie entlassen!",
-     kn5[]="Vielleicht mal 'nen| Förderturm kaufen...",
-     kn6[]="Sie sollten sich| gefälligst mehr Mühe| geben!",
+     kn5[]="Vielleicht mal 'nen| Fï¿½rderturm kaufen...",
+     kn6[]="Sie sollten sich| gefï¿½lligst mehr Mï¿½he| geben!",
      kn7[]="Sie brauchen nicht| jede Runde zu kommen.",
      kn8[]="Wissen Sie eigentlich,| dass Sie mich bereits| xxmal besucht haben?",
      kn9[]="Und Sie sind sich sicher,| dass Sie auch ohne eine| Windfahne zurecht kommen?",
-    kn10[]="Schön, Sie zu sehen...",
-    kn11[]="Was soll ich denn in| so einer frühen Phase| schon sagen?",
-    kn12[]="Sie sollten mehr Geld| verdienen, Fördertürme bauen| und den Gegner besiegen.",
+    kn10[]="Schï¿½n, Sie zu sehen...",
+    kn11[]="Was soll ich denn in| so einer frï¿½hen Phase| schon sagen?",
+    kn12[]="Sie sollten mehr Geld| verdienen, Fï¿½rdertï¿½rme bauen| und den Gegner besiegen.",
     kn13[]="Ich habe Ihnen nichts| neues zu sagen.",
     kn14[]="Find' ich nett, dass| Sie mich mal besuchen!";
 
@@ -832,7 +836,7 @@ void koenig()
    for( j=t=0;j<5;j++ )  t+=ft[n][j].x>-1;
 
    if( !(Random()%20) || kn[n]&16 || (kn[n]&15)>9 )
-      form_alert(1,"[0][Der König hat keine Lust,   |dich zu sprechen.][Schade]");
+      form_alert(1,"[0][Der Kï¿½nig hat keine Lust,   |dich zu sprechen.][Schade]");
    else
    {
       kn8[46]=kn[n]>2559? 48+kn[n]/2560:32; kn8[47]=48+kn[n]%2560/256;
